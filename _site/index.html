@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <script>
+        if('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js')
+            .then( reg => {
+                console.log('Registration worked!\n', reg)
+            })
+            .catch(err => {
+                console.error('Registration Error\n', err)
+            })
+        }
+    </script>
+</head>
+    <body>
+        <header>
+    <div class="header__logo">
+        <h1>Some friggin logo<h1>
+    </div>
+    <nav class="header__nav">
+        <a href="#Link_destination">LINK_TITLE</a>
+        <a href="#Link_destination">LINK_TITLE</a>
+        <a href="#Link_destination">LINK_TITLE</a>
+    </nav>
+
+    <div class="header__side-nav side-nav">
+        <div class="header__side-nav__container">
+
+        </div>
+    </div>
+
+    <div class="header__title">
+        <h1>Some friggin title<h1>
+    </div>
+</header>
+        <main class="content" aria-label="Page Content">
+            <div class="container">
+                <div class="welcome-container content-container">
+    <h1>Container Header</h1>
+</div>
+<div class="work-container content-container">
+    <h1>Container Header</h1>
+</div>
+<div class="about-me-container content-container">
+    <h1>Container Header</h1>
+</div>
+            </div>
+        </main>
+        <footer>
+    <section>Section 1 content</section>
+    <section>Section 2 content</section>
+    <section>Section 3 content</section>
+</footer>
+    </body>
+</html>

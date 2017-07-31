@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Roboto|Ubuntu");
+* {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+header {
+  width: 100%;
+  display: grid;
+  grid-template-areas: "logo . nav" ". title ." ". . .";
+  grid-template-columns: 2fr 3fr 2fr;
+  grid-template-rows: 50px 1fr 50px;
+  grid-gap: 20px; }
+
+.header__nav {
+  grid-area: nav;
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+  .header__nav a:visited, .header__nav a:link {
+    color: #3f61e6;
+    text-decoration: none; }
+
+.header__logo {
+  grid-area: logo;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.header__title {
+  font: oblique 2.1em/16px "Raleway";
+  color: #3f61e6;
+  grid-area: title;
+  display: flex;
+  justify-content: center; }

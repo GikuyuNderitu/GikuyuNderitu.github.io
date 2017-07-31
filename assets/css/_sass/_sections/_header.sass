@@ -1,0 +1,30 @@
+header
+    width: 100%
+    display: grid
+    grid-template-areas: "logo . nav" ". title ." ". . ."
+    grid-template-columns: 2fr 3fr 2fr
+    grid-template-rows: 50px 1fr 50px
+    grid-gap: 20px
+
+.header__nav
+    grid-area: nav
+    display: flex
+    justify-content: space-around
+    align-items: center
+
+    a:visited, a:link
+        color: $blue
+        text-decoration: none
+
+.header__logo
+    grid-area: logo
+    display: flex
+    justify-content: center
+    align-items: center
+
+.header__title
+    font: oblique 2.1em/16px $Rale
+    color: $blue
+    grid-area: title
+    display: flex
+    justify-content: center

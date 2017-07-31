@@ -1,1 +1,7 @@
 theme: jekyll-theme-minimal
+
+port: 8080
+
+sass:
+  sass_dir: assets/css
+  style: nested
