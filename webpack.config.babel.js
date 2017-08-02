@@ -34,9 +34,9 @@ const base = {
 	module: {
 		rules: [
 			{test: /\.js$/, use: 'babel-loader', exclude: /node_modules/},
-			{test: /\.css$/, use:['style-loader', 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]']},
-			{test: /\.sass$/, use: ['style-loader', 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]', 'sass-loader?indentedSyntax']},
-			{test: /\.(png|jpg|gif|woff|svg|eot|ttf|woff2)$/, loader: 'url-loader?limit=1024&name=[name]-[hash:8].[ext]!image-webpack'},
+			{test: /\.css$/, use: ['style-loader', 'css-loader', 'resolve-url-loader']},
+			{test: /\.sass$/, use: ['style-loader', 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]', 'resolve-url-loader', 'sass-loader?indentedSyntax']},
+			{test: /\.(png|jpg|gif|woff|svg|eot|ttf|woff2)$/, loader: ['url-loader?limit=1024&name=[name]-[hash:8].[ext]!image-webpack', 'resolve-url-loader']},
 		],
 	},
 	resolve: {
