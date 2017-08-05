@@ -3,6 +3,7 @@ import { render } from 'react-dom';
 
 import App from './app/App';
 
+import 'semantic-ui-css/semantic.css'
 
 const Root = () => (
     <App />
