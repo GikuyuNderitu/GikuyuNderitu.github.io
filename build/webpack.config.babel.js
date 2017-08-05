@@ -10,7 +10,7 @@ process.env.BABEL_ENV = LAUNCH_COMMAND
 
 const PATH = {
 	app: resolve(__dirname, 'src'),
-	out: resolve(__dirname, 'dist'),
+	out: resolve(__dirname, '..'),
 }
 
 const HTMLPluginConfig = new HtmlWebpackPlugin({
