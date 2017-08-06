@@ -1,16 +1,22 @@
 .container
     display: grid
-    grid-template-areas: "header header header" "welcome welcome welcome" "work work work" "about about about" "process process process"
-    grid-template-columns: 1fr 1fr 1fr
-    grid-template-rows: 150px 1fr 1fr 1fr 1fr
+    grid-template-areas: "header header header header header header" "welcome welcome welcome welcome welcome welcome" "work work work about about about" "process process process process process process"
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr
+    grid-template-rows: 60px 40% 20% 20%
+    grid-gap: 30px
+    min-height: 100vh
 
 .header
     grid-area: header
+    
 .welcome
     grid-area: welcome
+
 .work
     gird-area: work
+
 .about
     grid-area: about
+
 .myprocess
     grid-area: process
