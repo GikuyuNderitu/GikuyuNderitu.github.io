@@ -1,22 +1,105 @@
+$tabletSize: 600px
+$lapDesktop: 960px
+
 .container
     display: grid
-    grid-template-areas: "header header header header header header" "welcome welcome welcome welcome welcome welcome" "work work work about about about" "process process process process process process"
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr
-    grid-template-rows: 60px 40% 20% 20%
+    grid-template-areas: "header header header" "main main main"
+    grid-template-columns: 1fr 1fr 1fr
+    grid-template-rows: 60px 1fr
+    grid-gap: 10px
+    min-height: 100vh
+
+    @media screen and (min-width: $lapDesktop)
+        grid-template-areas: "aside header header" "aside main main"
+        grid-template-columns: 300px 1fr 1fr
+
+
+.main
+    margin-top: 10px
+    font-size: 1.2em
+    grid-area: main
+    display: grid
+    grid-template-areas: "welcome welcome welcome" "div1 div1 div1" "projects projects projects" "div2 div2 div2" "about about about" "div3 div3 div3" "process process process"
+    grid-template-columns: 1fr 1fr 1fr
+    grid-template-rows: 20% 20% 20% 20%
     grid-gap: 30px
     min-height: 100vh
+    padding-bottom: 20px
+
+    @media screen and (min-width: $lapDesktop)
+        grid-template-areas: "header header header header header header" "welcome welcome welcome welcome welcome welcome" "div1 div1 div1 div1 div1 div1" "projects projects projects about about about" "div3 div3 div3 div3 div3 div3" "process process process process process process"
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr
+        grid-template-rows: 60px 40% 20% 20%
+        grid-gap: 30px
+        font-size: 1.3em
+
+    @media screen and (min-width: $tabletSize) and (max-width: $lapDesktop - 1)
+        grid-template-areas: "header header header header header header" "welcome welcome welcome welcome welcome welcome" "div1 div1 div1 div1 div1 div1" "projects projects projects about about about" "div3 div3 div3 div3 div3 div3" "process process process process process process"
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr
+        grid-template-rows: 60px 40% 20% 20%
+        grid-gap: 30px
+        font-size: 1.3em
+.padSides
+    padding: 0 20px
+
+.responsiveFont
+    font-size-adjust: auto
+    // font-size: 1em
 
 .header
     grid-area: header
+
+.navList
+    list-style: none
+    font-size: 1.45em
+    padding: 0
+
+    > li
+        padding: 0 10px 
+        margin: 20px 0
+
+        &.active::after
+            content: "<"
+
+.aside
+    grid-area: aside
+    width: 300px
+    border-right: 1px solid #666
+    display: none
+    
+    @media screen and (min-width: $lapDesktop)
+        display: block
+        position: fixed
+        height: 100vh
+
+.whiteText
+    color: white !important
     
 .welcome
+    composes: responsiveFont
     grid-area: welcome
 
-.work
-    gird-area: work
+.projects
+    grid-area: projects
 
 .about
     grid-area: about
 
 .myprocess
     grid-area: process
+
+.div1
+    grid-area: div1
+
+.div1
+    grid-area: div1
+
+.div2
+    grid-area: div2
+
+    @media screen and(min-width: $tabletSize)
+        display: none
+
+.div3
+    grid-area: div3
+
