@@ -4,6 +4,6 @@
 // 4. Join the newly mapped arguments
 
 const computeStyle = style => style ? style : '';
-export function getstyles (...args) {
+export const getstyles = (...args) => {
     return args.map(computeStyle).reduce((prev, cur) => `${prev} ${cur}` , '')
 }

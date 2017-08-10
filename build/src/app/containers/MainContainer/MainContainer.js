@@ -7,8 +7,8 @@ import {HeaderContainer} from 'Containers'
 import {WelcomeComponent, AboutView, Process, ProjectsView, AsideView, Toolbar} from 'Components'
 
 
-const NavList = props => (
-	<ul className={navList}>
+export const NavList = props => (
+	<ul className={props.className}>
 		<li className="active">
 			<a href="#welcome">Welcome</a>
 		</li>
@@ -40,7 +40,7 @@ class MainContainer extends Component {
                         <Header className={whiteText} size="large">Menu</Header>
                     </Toolbar>
 
-                    <NavList />
+                    <NavList className={navList} />
                 </AsideView>
 
                 <main className={main}>

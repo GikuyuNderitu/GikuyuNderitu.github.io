@@ -1,4 +1,4 @@
-import getStyles from "Utils/functions/functions"
+import getStyles from "./functions/functions"
 
 export {getStyles}
 

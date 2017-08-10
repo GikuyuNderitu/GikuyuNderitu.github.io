@@ -6,13 +6,28 @@
     height: 100vh
     width: 100vw
     opacity: 0
-    background: #888
+    background: rgba(90, 90, 90, .3)
     will-change: opacity
+    transition: opacity 200ms linear
     
     &.active
-        opacity: .39
+        opacity: 1
 
 .sideNav
-    width: 100%
+    opacity: 1
+    max-width: 100%
     will-change: transform
     transform: translateX(-101%)
+    transition: transform 300ms ease-out
+    background: white
+    height: 100%
+    position: fixed
+    top: 0
+    left: 0
+    min-width: 300px
+    z-index: 1
+    box-shadow: 3px 0 10px rgba(155, 155, 155, .8)
+
+    &.active
+        transform: translateX(0%)
+
