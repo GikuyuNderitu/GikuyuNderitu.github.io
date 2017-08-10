@@ -3,7 +3,7 @@ import {Header} from 'Components'
 import {SideNavContainer} from 'Containers'
 import {NavList} from "../MainContainer/MainContainer"
 
-import {container} from './HeaderContainer.sass';
+import {container, sideNav} from './HeaderContainer.sass';
 
 class HeaderContainer extends Component {
 	constructor(props) {
@@ -21,7 +21,7 @@ class HeaderContainer extends Component {
 			<div className={this.props.className}>
 				<Header toggleVisibility={this.toggleSideNav}/>
 				<SideNavContainer toggled={this.state.sideNav} toggleVisibility={this.toggleSideNav}>
-					<NavList/>
+					<NavList className={sideNav}/>
 				</SideNavContainer>
 			</div>
 		)

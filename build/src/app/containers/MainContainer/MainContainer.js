@@ -6,9 +6,12 @@ import {Divider, Header} from 'semantic-ui-react'
 import {HeaderContainer} from 'Containers'
 import {WelcomeComponent, AboutView, Process, ProjectsView, AsideView, Toolbar} from 'Components'
 
+const computeStyle = style => style ? style : '';
+const getstyles = (...args) => args.map(computeStyle).reduce((prev, cur) => `${prev} ${cur}` , '')
+
 
 export const NavList = props => (
-	<ul className={props.className}>
+	<ul className={`${getstyles(props.className)}`}>
 		<li className="active">
 			<a href="#welcome">Welcome</a>
 		</li>
