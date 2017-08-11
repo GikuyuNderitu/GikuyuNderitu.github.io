@@ -9,11 +9,18 @@ class SideNavContainer extends Component {
 
 	stopProp = e => e.stopPropagation();
 
+	componentDidMount() {
+		const e = document.getElementById("sideNav");
+		const anchors = e.getElementsByTagName("a");
+
+		Array.from(anchors).forEach(link => link.onclick = this.props.toggleVisibility)
+	}
+
 	render() {
 		const containerStyle = this.getActiveStyle(container);
 		const contentStyle = this.getActiveStyle(sideNav)
 		return (
-			<div className={containerStyle} onClick={this.props.toggleVisibility}>
+			<div id="sideNav" className={containerStyle} onClick={this.props.toggleVisibility}>
 				<div className={contentStyle} onClick={this.stopProp}>
 					{this.props.children}
 				</div>

@@ -14,28 +14,16 @@ const navigateTo = route => window.location.assign(route);
 export const NavList = props => (
 	<ul className={`${getstyles(props.className)}`}>
 		<li className="active">
-			<a onClick={()=> {
-                navigateTo('#welcome');
-                props.toggleSideNav ? props.toggleSideNav() : console.log('toggle not run');
-            }}>Welcome</a>
+			<a href="#welcome" onClick={()=> navigateTo('#welcome')}>Welcome</a>
 		</li>
 		<li>
-			<a onClick={()=> {
-                navigateTo('#projects');
-                props.toggleSideNav ? props.toggleSideNav() : console.log('toggle not run');
-            }}>Projects</a>
+			<a href="#projects">Projects</a>
 		</li>
 		<li>
-			<a onClick={()=> {
-                navigateTo('#about');
-                props.toggleSideNav ? props.toggleSideNav() : console.log('toggle not run');
-            }}>About</a>
+			<a href="#about">About</a>
 		</li>
 		<li>
-			<a onClick={()=> {
-                navigateTo('#process');
-                props.toggleSideNav ? props.toggleSideNav() : console.log('toggle not run');
-            }}>Process</a>
+			<a href="#process">Process</a>
 		</li>
 	</ul>
 )
