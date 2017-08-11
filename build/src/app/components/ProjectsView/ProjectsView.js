@@ -10,7 +10,7 @@ class ProjectsView extends Component {
 			<div id={this.props.id} className={this.props.className}>
 				<Header size="large">{'Projects'}</Header>
 				<p>{`Here are my projects, go ahead, take a look!`}</p>
-				<Button href={'https://www.gikuyunderitu.github.io/my-projects'} as="a" primary> Take a look !</Button>
+				<Button href={'https://gikuyunderitu.github.io/my-projects/'} as="a" primary> Take a look !</Button>
 			</div>
 		)
 	}
