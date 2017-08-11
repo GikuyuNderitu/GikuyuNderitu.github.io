@@ -9,20 +9,33 @@ import {WelcomeComponent, AboutView, Process, ProjectsView, AsideView, Toolbar} 
 const computeStyle = style => style ? style : '';
 const getstyles = (...args) => args.map(computeStyle).reduce((prev, cur) => `${prev} ${cur}` , '')
 
+const navigateTo = route => window.location.assign(route);
 
 export const NavList = props => (
 	<ul className={`${getstyles(props.className)}`}>
 		<li className="active">
-			<a href="#welcome">Welcome</a>
+			<a onClick={()=> {
+                navigateTo('#welcome');
+                props.toggleSideNav ? props.toggleSideNav() : console.log('toggle not run');
+            }}>Welcome</a>
 		</li>
 		<li>
-			<a href="#projects">Projects</a>
+			<a onClick={()=> {
+                navigateTo('#projects');
+                props.toggleSideNav ? props.toggleSideNav() : console.log('toggle not run');
+            }}>Projects</a>
 		</li>
 		<li>
-			<a href="#about">About</a>
+			<a onClick={()=> {
+                navigateTo('#about');
+                props.toggleSideNav ? props.toggleSideNav() : console.log('toggle not run');
+            }}>About</a>
 		</li>
 		<li>
-			<a href="#process">Process</a>
+			<a onClick={()=> {
+                navigateTo('#process');
+                props.toggleSideNav ? props.toggleSideNav() : console.log('toggle not run');
+            }}>Process</a>
 		</li>
 	</ul>
 )

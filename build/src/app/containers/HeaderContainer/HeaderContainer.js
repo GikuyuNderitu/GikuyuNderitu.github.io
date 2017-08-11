@@ -21,7 +21,7 @@ class HeaderContainer extends Component {
 			<div className={this.props.className}>
 				<Header toggleVisibility={this.toggleSideNav}/>
 				<SideNavContainer toggled={this.state.sideNav} toggleVisibility={this.toggleSideNav}>
-					<NavList className={sideNav}/>
+					<NavList className={sideNav} toggleSideNav={this.toggleSideNav}/>
 				</SideNavContainer>
 			</div>
 		)

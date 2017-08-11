@@ -12,7 +12,6 @@ const getstyles = (...args) => args.map(computeStyle).reduce((prev, cur) => `${p
 class AsideView extends Component {
 	render() {
 		const innerStyle = getstyles(styles.container, this.props.className)
-		console.log(innerStyle);
 		return (
 			<div className={innerStyle}>
 				{this.props.children}

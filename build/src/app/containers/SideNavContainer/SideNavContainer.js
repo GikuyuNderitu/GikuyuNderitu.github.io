@@ -7,7 +7,7 @@ class SideNavContainer extends Component {
 	getClassName = () => this.props.className ? this.props.className : ''
 	getActiveStyle = (style) => this.props.toggled ? `${style} ${active} ${this.getClassName()}` : `${style} ${this.getClassName()}`
 
-	stopProp = e => e.stopPropogation()
+	stopProp = e => e.stopPropagation();
 
 	render() {
 		const containerStyle = this.getActiveStyle(container);
