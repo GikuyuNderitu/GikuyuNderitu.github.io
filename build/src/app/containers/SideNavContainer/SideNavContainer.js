@@ -13,7 +13,16 @@ class SideNavContainer extends Component {
 		const e = document.getElementById("sideNav");
 		const anchors = e.getElementsByTagName("a");
 
-		Array.from(anchors).forEach(link => link.onclick = this.props.toggleVisibility)
+		const bindLinkToParent = link => {
+			const parent = link.parentNode;
+
+			parent.onclick = e => {
+				window.location.assign(link.href);
+				this.props.toggleVisibility();
+			}
+		}
+
+		Array.from(anchors).forEach(bindLinkToParent)
 	}
 
 	render() {

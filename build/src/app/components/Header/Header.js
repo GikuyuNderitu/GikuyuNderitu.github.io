@@ -6,12 +6,7 @@ import {container, title, toggle} from './Header.sass';
 
 const Title = (props) => (
 	<SemHeader className={title} size="huge">AtypicalDev</SemHeader>
-	// <h1 className={title}>AtypicalDev</h1>
 )
-
-// const NavTrigger = (props) => (
-	
-// )
 
 class Header extends Component {
 	render() {

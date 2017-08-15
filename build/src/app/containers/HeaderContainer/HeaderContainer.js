@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
-import {Header} from 'Components'
+import {Header, Toolbar} from 'Components'
 import {SideNavContainer} from 'Containers'
+
+import {Header as SemHeader} from 'semantic-ui-react'
 import {NavList} from "../MainContainer/MainContainer"
 
-import {container, sideNav} from './HeaderContainer.sass';
+import {container, sideNav, white} from './HeaderContainer.sass';
 
 class HeaderContainer extends Component {
 	constructor(props) {
@@ -21,6 +23,9 @@ class HeaderContainer extends Component {
 			<div className={this.props.className}>
 				<Header toggleVisibility={this.toggleSideNav}/>
 				<SideNavContainer toggled={this.state.sideNav} toggleVisibility={this.toggleSideNav}>
+					<Toolbar>
+						<SemHeader size="large" className={white}>Atypical Dev</SemHeader>
+					</Toolbar>
 					<NavList className={sideNav} toggleSideNav={this.toggleSideNav}/>
 				</SideNavContainer>
 			</div>
